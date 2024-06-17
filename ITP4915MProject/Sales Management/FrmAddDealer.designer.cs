@@ -51,12 +51,14 @@ namespace ITP4915MProject.Account_Management
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAddDealer);
             this.panel1.Controls.Add(this.btnDealerList);
             this.panel1.Controls.Add(this.label10);
@@ -267,6 +269,17 @@ namespace ITP4915MProject.Account_Management
             this.label1.TabIndex = 0;
             this.label1.Text = "Dealer Name:";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(839, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmAddDealer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -310,5 +323,6 @@ namespace ITP4915MProject.Account_Management
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnAddDealer;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

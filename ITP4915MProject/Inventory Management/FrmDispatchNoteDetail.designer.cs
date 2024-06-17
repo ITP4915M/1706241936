@@ -45,6 +45,7 @@ namespace ITP4915MProject
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.lblOrderDate = new System.Windows.Forms.Label();
             this.lblOrderID = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grpOrderItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItem)).BeginInit();
@@ -55,6 +56,7 @@ namespace ITP4915MProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.grpOrderItem);
@@ -240,6 +242,17 @@ namespace ITP4915MProject
             this.lblOrderID.TabIndex = 0;
             this.lblOrderID.Text = "Order ID:";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(845, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmDispatchNoteDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -283,5 +296,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Label lblOrderDate;
         private System.Windows.Forms.Label lblOrderID;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

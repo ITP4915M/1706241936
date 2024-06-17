@@ -29,8 +29,8 @@ namespace ITP4915MProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateOrder));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btn_Remove = new System.Windows.Forms.Button();
@@ -43,6 +43,7 @@ namespace ITP4915MProject
             this.lblDealer = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_SaveToDraft = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grpItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItem)).BeginInit();
@@ -55,6 +56,7 @@ namespace ITP4915MProject
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnConfirm);
             this.panel1.Controls.Add(this.btn_Remove);
             this.panel1.Controls.Add(this.btnSelectItem);
@@ -138,14 +140,14 @@ namespace ITP4915MProject
             // 
             // dgvOrderItem
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrderItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrderItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrderItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrderItem.Location = new System.Drawing.Point(3, 23);
@@ -165,9 +167,9 @@ namespace ITP4915MProject
             this.grpInformation.Controls.Add(this.lblDealer);
             this.grpInformation.Controls.Add(this.label5);
             this.grpInformation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInformation.Location = new System.Drawing.Point(8, 8);
+            this.grpInformation.Location = new System.Drawing.Point(8, 20);
             this.grpInformation.Name = "grpInformation";
-            this.grpInformation.Size = new System.Drawing.Size(850, 131);
+            this.grpInformation.Size = new System.Drawing.Size(850, 119);
             this.grpInformation.TabIndex = 15;
             this.grpInformation.TabStop = false;
             this.grpInformation.Text = "Basic Information";
@@ -175,9 +177,9 @@ namespace ITP4915MProject
             // 
             // rtbRemark
             // 
-            this.rtbRemark.Location = new System.Drawing.Point(546, 38);
+            this.rtbRemark.Location = new System.Drawing.Point(504, 33);
             this.rtbRemark.Name = "rtbRemark";
-            this.rtbRemark.Size = new System.Drawing.Size(239, 87);
+            this.rtbRemark.Size = new System.Drawing.Size(307, 66);
             this.rtbRemark.TabIndex = 10;
             this.rtbRemark.Text = "None";
             this.rtbRemark.TextChanged += new System.EventHandler(this.rtbRemark_TextChanged);
@@ -234,6 +236,17 @@ namespace ITP4915MProject
             this.btn_SaveToDraft.UseVisualStyleBackColor = false;
             this.btn_SaveToDraft.Click += new System.EventHandler(this.btn_SaveToDraft_Click_1);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(839, -1);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmCreateOrder
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -272,5 +285,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.DataGridView dgvOrderItem;
         private System.Windows.Forms.RichTextBox rtbRemark;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

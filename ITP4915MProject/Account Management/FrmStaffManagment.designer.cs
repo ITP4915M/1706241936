@@ -40,6 +40,7 @@ namespace ITP4915MProject
             this.lblName = new System.Windows.Forms.Label();
             this.grpStaffAccount = new System.Windows.Forms.GroupBox();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.grpStaffAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -66,6 +67,7 @@ namespace ITP4915MProject
             this.grpFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpFilter.BackColor = System.Drawing.Color.White;
+            this.grpFilter.Controls.Add(this.btnCancel);
             this.grpFilter.Controls.Add(this.btnCreateAccount);
             this.grpFilter.Controls.Add(this.btnReset);
             this.grpFilter.Controls.Add(this.btnSearch);
@@ -174,6 +176,17 @@ namespace ITP4915MProject
             this.dgvStaff.Size = new System.Drawing.Size(1034, 449);
             this.dgvStaff.TabIndex = 10;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(993, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmStaffManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -209,5 +222,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox grpStaffAccount;
         private System.Windows.Forms.DataGridView dgvStaff;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

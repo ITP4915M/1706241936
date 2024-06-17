@@ -46,6 +46,8 @@ namespace ITP4915MProject
             dgvOrderItem.Columns["Category"].Visible = false;
             dgvOrderItem.Columns["StockLevel"].Visible = false;
         }
+
+
     }
 
 }

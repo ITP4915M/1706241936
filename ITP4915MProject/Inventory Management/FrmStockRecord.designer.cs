@@ -40,6 +40,7 @@ namespace ITP4915MProject
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.cbxRecordType = new System.Windows.Forms.ComboBox();
             this.lblRecordType = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grpStockRecord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockRecordList)).BeginInit();
@@ -49,6 +50,7 @@ namespace ITP4915MProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.grpStockRecord);
             this.panel1.Controls.Add(this.grpFilter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -158,6 +160,17 @@ namespace ITP4915MProject
             this.lblRecordType.TabIndex = 0;
             this.lblRecordType.Text = "Record Type:";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(855, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmStockRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -193,5 +206,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.ComboBox cbxRecordType;
         private System.Windows.Forms.Label lblRecordType;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -40,6 +40,7 @@ namespace ITP4915MProject
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblOrderNumber = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDISet)).BeginInit();
@@ -49,6 +50,7 @@ namespace ITP4915MProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.grpFilter);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
@@ -157,6 +159,17 @@ namespace ITP4915MProject
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(848, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmDispatchNoteList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -192,5 +205,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblOrderNumber;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

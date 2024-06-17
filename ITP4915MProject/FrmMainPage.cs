@@ -14,41 +14,19 @@ namespace ITP4915MProject
     {
         public Point mouseLocation;
         private Point mouseOffset;
-        int panelWidth;
-        bool isCollapsed;
-        bool orderCollasped;
+        
+        bool panelLeftExpand; 
+        bool salesCollapsed;
+        bool inventoryCollapsed;
         public FrmMainPage()
         {
             InitializeComponent();
-            timerTime.Start();
-            panelWidth = panelLeft.Width;
-            isCollapsed = false;
+            panelLefttimer.Start(); //一開畫面就行
+            timerTime.Start(); //一開畫面就顯示時間
+            salseTimer.Start();
+            inventoryTimer.Start();
 
-        }
 
-        private void timer1_Tick(object sender, EventArgs e) //panelLeft control
-        {
-            if (isCollapsed)
-            {
-                // if panelleft is expand , minimize
-                panelLeft.Width += 10;
-                if (panelLeft.Width >= panelWidth)
-                {
-                    Slidetimer1.Stop();
-                    isCollapsed = false;
-                    this.Refresh();
-                }
-            }
-            else
-            {
-                panelLeft.Width -= 10;
-                if (panelLeft.Width <= 55)
-                {
-                    Slidetimer1.Stop();
-                    isCollapsed = true;
-                    this.Refresh();
-                }
-            }
         }
 
         private void timerTime_Tick(object sender, EventArgs e)
@@ -59,14 +37,10 @@ namespace ITP4915MProject
 
         private void button2_Click(object sender, EventArgs e) //三條線
         {
-            Slidetimer1.Start(); //撳落去彈出黎
+            panelLefttimer.Start(); //撳落去彈出黎
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
-
-        {
-            SalseTimer.Start();
-        }
+        
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,33 +70,11 @@ namespace ITP4915MProject
 
 
 
-        private void HomeTimer_Tick(object sender, EventArgs e)
-        {
-            ContainerCollection();
-        }
 
-        private void ContainerCollection()
-        {
-            if (orderCollasped)
-            {
-                ContainerSales.Height += 180;
-                if (ContainerSales.Height == ContainerSales.MaximumSize.Height) ;
-                orderCollasped = false;
-                SalseTimer.Stop();
-            }
-            else
-            {
-                ContainerSales.Height -= 180;
-                if (ContainerSales.Height == ContainerSales.MinimumSize.Height) ;
-                orderCollasped = true;
-                SalseTimer.Stop();
-            }
-        }
 
-        private void btnItemManagment_Click(object sender, EventArgs e)
-        {
-            loadform(new FrmItemList());
-        }
+      
+
+
 
         private void btn_OrderList_Click(object sender, EventArgs e)
         {
@@ -138,7 +90,7 @@ namespace ITP4915MProject
         {
             mouseOffset = new Point(e.X, e.Y);
         }
-        private void mouse_Move(object sender, MouseEventArgs e)
+        private void mouse_Move(object sender, MouseEventArgs e)  //mouse hold the top bar can move
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -147,34 +99,80 @@ namespace ITP4915MProject
             }
         }
 
-        private void btnFrmItem_Click(object sender, EventArgs e)
-        {
-            loadform(new FrmItemList());
-        }
-
-        private void btnStockRecord_Click(object sender, EventArgs e)
-        {
-            loadform(new FrmDispatchNoteList());
-        }
-
-        private void btnWorks_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Account_Click(object sender, EventArgs e)
         {
             loadform(new FrmStaffManagment());
         }
 
-        private void btnInventory_Click(object sender, EventArgs e)
+
+        private void panelLeftTimer_Tick(object sender, EventArgs e)
         {
-            loadform(new FrmStockRecord());
+            if (panelLeftExpand)
+            {
+                panelLeft.Width -= 10; //if panelLeft is expand, minimize
+                if (panelLeft.Width == panelLeft.MinimumSize.Width)
+                {
+                    panelLeftExpand = false;
+                    panelLefttimer.Stop();
+                }
+            }
+            else
+            {
+                panelLeft.Width += 10; //if panelLeft is expand, maximum
+                if (panelLeft.Width == panelLeft.MaximumSize.Width)
+                {
+                    panelLeftExpand = true;
+                    panelLefttimer.Stop();
+                }
+            }
         }
 
-        private void containerSales_Click(object sender, EventArgs e)
+        private void containerSales_Tick(object sender, EventArgs e) //sales container controller
         {
+            
+                if (salesCollapsed)
+                {
+                    ContainerSales.Height += 180;
+                    if (ContainerSales.Height == ContainerSales.MaximumSize.Height) 
+                    salesCollapsed = false;
+                    salseTimer.Stop();
+                }
+                else
+                {
+                    ContainerSales.Height -= 180;
+                    if (ContainerSales.Height == ContainerSales.MinimumSize.Height) 
+                    salesCollapsed = true;
+                    salseTimer.Stop();
+                }
+            
+        }
 
+        private void btn_SalesManagement_Click(object sender, EventArgs e)
+        {
+            salseTimer.Start();//撳落去sales container彈出黎
+        }
+
+        private void containerInventory_Tick(object sender, EventArgs e)
+        {
+            if (inventoryCollapsed)
+            {
+                ContainorInventory.Height += 225;
+                if (ContainorInventory.Height == ContainorInventory.MaximumSize.Height)
+                    inventoryCollapsed = false;
+                inventoryTimer.Stop();
+            }
+            else
+            {
+                ContainerSales.Height -= 225;
+                if (ContainorInventory.Height == ContainorInventory.MinimumSize.Height)
+                    inventoryCollapsed = true;
+                inventoryTimer.Stop();
+            }
+        }
+
+        private void InventoryManagement_Click(object sender, EventArgs e)
+        {
+            inventoryTimer.Start();//撳落去Inventory container彈出黎
         }
     }
 }

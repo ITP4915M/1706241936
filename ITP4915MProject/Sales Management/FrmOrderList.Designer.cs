@@ -43,6 +43,7 @@ namespace ITP4915MProject
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.grpDataTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
@@ -59,9 +60,9 @@ namespace ITP4915MProject
             this.grpFilter.Controls.Add(this.lblOrderNumber);
             this.grpFilter.Controls.Add(this.btnReset);
             this.grpFilter.Controls.Add(this.btnSearch);
-            this.grpFilter.Location = new System.Drawing.Point(10, 10);
+            this.grpFilter.Location = new System.Drawing.Point(10, 13);
             this.grpFilter.Name = "grpFilter";
-            this.grpFilter.Size = new System.Drawing.Size(869, 173);
+            this.grpFilter.Size = new System.Drawing.Size(869, 170);
             this.grpFilter.TabIndex = 0;
             this.grpFilter.TabStop = false;
             this.grpFilter.Text = "Filter";
@@ -71,7 +72,7 @@ namespace ITP4915MProject
             this.lblOrderDate.AutoSize = true;
             this.lblOrderDate.Location = new System.Drawing.Point(300, 38);
             this.lblOrderDate.Name = "lblOrderDate";
-            this.lblOrderDate.Size = new System.Drawing.Size(196, 38);
+            this.lblOrderDate.Size = new System.Drawing.Size(97, 19);
             this.lblOrderDate.TabIndex = 8;
             this.lblOrderDate.Text = "Order Date:";
             // 
@@ -83,7 +84,7 @@ namespace ITP4915MProject
             this.dtpOrderDate.Location = new System.Drawing.Point(403, 35);
             this.dtpOrderDate.Name = "dtpOrderDate";
             this.dtpOrderDate.ShowCheckBox = true;
-            this.dtpOrderDate.Size = new System.Drawing.Size(286, 47);
+            this.dtpOrderDate.Size = new System.Drawing.Size(286, 27);
             this.dtpOrderDate.TabIndex = 7;
             this.dtpOrderDate.Value = new System.DateTime(2024, 5, 29, 0, 0, 0, 0);
             // 
@@ -92,14 +93,14 @@ namespace ITP4915MProject
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Location = new System.Drawing.Point(116, 108);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(166, 46);
+            this.cbxStatus.Size = new System.Drawing.Size(166, 27);
             this.cbxStatus.TabIndex = 6;
             // 
             // txtOrderNumber
             // 
             this.txtOrderNumber.Location = new System.Drawing.Point(134, 38);
             this.txtOrderNumber.Name = "txtOrderNumber";
-            this.txtOrderNumber.Size = new System.Drawing.Size(148, 47);
+            this.txtOrderNumber.Size = new System.Drawing.Size(148, 27);
             this.txtOrderNumber.TabIndex = 4;
             // 
             // lblOrderStatus
@@ -107,7 +108,7 @@ namespace ITP4915MProject
             this.lblOrderStatus.AutoSize = true;
             this.lblOrderStatus.Location = new System.Drawing.Point(6, 111);
             this.lblOrderStatus.Name = "lblOrderStatus";
-            this.lblOrderStatus.Size = new System.Drawing.Size(214, 38);
+            this.lblOrderStatus.Size = new System.Drawing.Size(104, 19);
             this.lblOrderStatus.TabIndex = 3;
             this.lblOrderStatus.Text = "Order Status:";
             // 
@@ -116,7 +117,7 @@ namespace ITP4915MProject
             this.lblOrderNumber.AutoSize = true;
             this.lblOrderNumber.Location = new System.Drawing.Point(3, 38);
             this.lblOrderNumber.Name = "lblOrderNumber";
-            this.lblOrderNumber.Size = new System.Drawing.Size(247, 38);
+            this.lblOrderNumber.Size = new System.Drawing.Size(125, 19);
             this.lblOrderNumber.TabIndex = 2;
             this.lblOrderNumber.Text = "Order Number:";
             // 
@@ -127,7 +128,7 @@ namespace ITP4915MProject
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReset.Location = new System.Drawing.Point(710, 40);
+            this.btnReset.Location = new System.Drawing.Point(710, 39);
             this.btnReset.Name = "btnReset";
             this.btnReset.Padding = new System.Windows.Forms.Padding(3);
             this.btnReset.Size = new System.Drawing.Size(141, 40);
@@ -143,7 +144,7 @@ namespace ITP4915MProject
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.Location = new System.Drawing.Point(710, 100);
+            this.btnSearch.Location = new System.Drawing.Point(710, 99);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(3);
             this.btnSearch.Size = new System.Drawing.Size(141, 40);
@@ -178,6 +179,7 @@ namespace ITP4915MProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.grpFilter);
             this.panel1.Controls.Add(this.grpDataTable);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
@@ -198,9 +200,20 @@ namespace ITP4915MProject
             this.panel2.Size = new System.Drawing.Size(902, 11);
             this.panel2.TabIndex = 2;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(847, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmOrderList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(902, 745);
@@ -237,5 +250,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.DataGridView dgvOrderList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

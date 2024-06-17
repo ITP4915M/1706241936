@@ -42,6 +42,7 @@ namespace ITP4915MProject
             this.grpItemList = new System.Windows.Forms.GroupBox();
             this.dgvItemInfo = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpFilter.SuspendLayout();
             this.grpItemList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemInfo)).BeginInit();
@@ -51,6 +52,7 @@ namespace ITP4915MProject
             // grpFilter
             // 
             this.grpFilter.BackColor = System.Drawing.Color.White;
+            this.grpFilter.Controls.Add(this.btnCancel);
             this.grpFilter.Controls.Add(this.btnSearch);
             this.grpFilter.Controls.Add(this.btnReset);
             this.grpFilter.Controls.Add(this.cbxCatagory);
@@ -177,6 +179,17 @@ namespace ITP4915MProject
             this.panel1.Size = new System.Drawing.Size(1256, 756);
             this.panel1.TabIndex = 2;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(848, 1);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(27, 26);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmItemList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -213,5 +226,6 @@ namespace ITP4915MProject
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.TextBox txtItemID;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
