@@ -16,19 +16,139 @@ namespace ITP4915MProject
         private Point mouseOffset;
         
         bool panelLeftExpand; 
-        bool salesCollapsed;
-        bool inventoryCollapsed;
+        bool salesCollapsed=false;
+        bool inventoryCollapsed=false;
+        bool invoiceCollapsed = false;
+        bool purchasingCollapsed = false;
+        bool accountCollapsed = false;
+        bool accountingCollapsed = false;
         public FrmMainPage()
         {
             InitializeComponent();
+            tooglePanels();
             panelLefttimer.Start(); //一開畫面就行
             timerTime.Start(); //一開畫面就顯示時間
-            salseTimer.Start();
-            inventoryTimer.Start();
+          
 
 
         }
 
+        private void tooglePanels()
+        {
+            if (salesCollapsed)
+            {
+                ContainerSales.Height = 180;
+            }
+            else
+            {
+                ContainerSales.Height = 45;
+            }
+            if (inventoryCollapsed)
+            {
+                ContainorInventory.Height = 225;
+            }
+            else
+            {
+                ContainorInventory.Height = 45;
+            }
+            if (invoiceCollapsed)
+            {
+                ContainerInvoice.Height = 90;
+            }
+            else
+            {
+                ContainerInvoice.Height = 45;
+            }
+            if (purchasingCollapsed)
+            {
+                ContainerPurchasing.Height = 180;
+            }
+            else
+            {
+                ContainerPurchasing.Height = 45;
+            }
+            if (accountCollapsed)
+            {
+                ContainerAccount.Height = 135;
+            }
+            else
+            {
+                ContainerAccount.Height = 45;
+            }
+            if (accountingCollapsed)
+            {
+                ContainerAccounting.Height = 90;
+            }
+            else
+            {
+                ContainerAccounting.Height = 45;
+            }
+        }
+
+        private void btn_SalesManagement_Click(object sender, EventArgs e)//撳落去sales container彈出黎
+        {
+            inventoryCollapsed=false;
+        invoiceCollapsed = false;
+        purchasingCollapsed = false;
+        accountCollapsed = false;
+        accountingCollapsed = false;
+            salesCollapsed = !salesCollapsed;
+            tooglePanels();
+        }
+
+        private void InventoryManagement_Click(object sender, EventArgs e)//撳落去Inventory container彈出黎
+        {
+            salesCollapsed = false;
+            invoiceCollapsed = false;
+            purchasingCollapsed = false;
+            accountCollapsed = false;
+            accountingCollapsed = false;
+            inventoryCollapsed = !inventoryCollapsed;
+            tooglePanels();
+        }
+        private void btn_Invoice_Click(object sender, EventArgs e)
+        {
+            salesCollapsed = false;
+            inventoryCollapsed = false;
+            purchasingCollapsed = false;
+            accountCollapsed = false;
+            accountingCollapsed = false;
+            invoiceCollapsed = !invoiceCollapsed;
+            tooglePanels();
+        }
+
+        private void btn_PurchasingManagement_Click(object sender, EventArgs e)
+        {
+            salesCollapsed = false;
+            invoiceCollapsed = false;
+            inventoryCollapsed = false;
+            accountCollapsed = false;
+            accountingCollapsed = false;
+
+            purchasingCollapsed = !purchasingCollapsed;
+            tooglePanels();
+        }
+        private void btnAccountManagement_Click(object sender, EventArgs e)
+        {
+            salesCollapsed = false;
+            inventoryCollapsed = false;
+            purchasingCollapsed = false;
+            inventoryCollapsed = false;
+            accountingCollapsed = false;
+            accountCollapsed = !accountCollapsed;
+            tooglePanels();
+        }
+
+        private void btn_AccountingManagement_Click(object sender, EventArgs e)
+        {
+            salesCollapsed = false;
+            inventoryCollapsed = false;
+            purchasingCollapsed = false;
+            inventoryCollapsed = false;
+            accountCollapsed = false;
+            accountingCollapsed = !accountingCollapsed;
+            tooglePanels();
+        }
         private void timerTime_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString(); //show time
@@ -69,7 +189,7 @@ namespace ITP4915MProject
         }
 
 
-
+        
 
 
       
@@ -147,10 +267,7 @@ namespace ITP4915MProject
             
         }
 
-        private void btn_SalesManagement_Click(object sender, EventArgs e)
-        {
-            salseTimer.Start();//撳落去sales container彈出黎
-        }
+        
 
         private void containerInventory_Tick(object sender, EventArgs e)
         {
@@ -170,9 +287,6 @@ namespace ITP4915MProject
             }
         }
 
-        private void InventoryManagement_Click(object sender, EventArgs e)
-        {
-            inventoryTimer.Start();//撳落去Inventory container彈出黎
-        }
+      
     }
 }

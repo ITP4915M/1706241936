@@ -68,11 +68,11 @@ namespace ITP4915MProject
             this.btn_PurchasingManagement = new System.Windows.Forms.Button();
             this.btn_GoodReceiveNoteList = new System.Windows.Forms.Button();
             this.btn_CreateGoodReceiveNote = new System.Windows.Forms.Button();
-            this.ContainerAccout = new System.Windows.Forms.Panel();
-            this.btn_ManagePassoword = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.btn_AccountList = new System.Windows.Forms.Button();
             this.ContainerAccount = new System.Windows.Forms.Panel();
+            this.btn_ManagePassoword = new System.Windows.Forms.Button();
+            this.btnAccountManagement = new System.Windows.Forms.Button();
+            this.btn_AccountList = new System.Windows.Forms.Button();
+            this.ContainerAccounting = new System.Windows.Forms.Panel();
             this.btn_AccountingManagement = new System.Windows.Forms.Button();
             this.btn_Report = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -89,8 +89,8 @@ namespace ITP4915MProject
             this.ContainorInventory.SuspendLayout();
             this.ContainerInvoice.SuspendLayout();
             this.ContainerPurchasing.SuspendLayout();
-            this.ContainerAccout.SuspendLayout();
             this.ContainerAccount.SuspendLayout();
+            this.ContainerAccounting.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +110,7 @@ namespace ITP4915MProject
             this.btn_SalesManagement.Name = "btn_SalesManagement";
             this.btn_SalesManagement.Size = new System.Drawing.Size(298, 45);
             this.btn_SalesManagement.TabIndex = 1;
-            this.btn_SalesManagement.Text = "     Sales Management";
+            this.btn_SalesManagement.Text = "     Sales Management                 ︾";
             this.btn_SalesManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_SalesManagement.UseVisualStyleBackColor = false;
             this.btn_SalesManagement.Click += new System.EventHandler(this.btn_SalesManagement_Click);
@@ -381,8 +381,8 @@ namespace ITP4915MProject
             this.panelLeft.Controls.Add(this.ContainorInventory);
             this.panelLeft.Controls.Add(this.ContainerInvoice);
             this.panelLeft.Controls.Add(this.ContainerPurchasing);
-            this.panelLeft.Controls.Add(this.ContainerAccout);
             this.panelLeft.Controls.Add(this.ContainerAccount);
+            this.panelLeft.Controls.Add(this.ContainerAccounting);
             this.panelLeft.Controls.Add(this.panel1);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.ForeColor = System.Drawing.Color.White;
@@ -460,7 +460,7 @@ namespace ITP4915MProject
             this.btn_Inventory.Name = "btn_Inventory";
             this.btn_Inventory.Size = new System.Drawing.Size(298, 45);
             this.btn_Inventory.TabIndex = 1;
-            this.btn_Inventory.Text = "     Inventory Management";
+            this.btn_Inventory.Text = "     Inventory Management         ︾";
             this.btn_Inventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Inventory.UseVisualStyleBackColor = false;
             this.btn_Inventory.Click += new System.EventHandler(this.InventoryManagement_Click);
@@ -528,9 +528,10 @@ namespace ITP4915MProject
             this.btn_Invoice.Name = "btn_Invoice";
             this.btn_Invoice.Size = new System.Drawing.Size(298, 45);
             this.btn_Invoice.TabIndex = 1;
-            this.btn_Invoice.Text = "     Invoice Management";
+            this.btn_Invoice.Text = "     Invoice Management            ︾";
             this.btn_Invoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Invoice.UseVisualStyleBackColor = false;
+            this.btn_Invoice.Click += new System.EventHandler(this.btn_Invoice_Click);
             // 
             // btn_InvoiceList
             // 
@@ -599,9 +600,10 @@ namespace ITP4915MProject
             this.btn_PurchasingManagement.Name = "btn_PurchasingManagement";
             this.btn_PurchasingManagement.Size = new System.Drawing.Size(298, 45);
             this.btn_PurchasingManagement.TabIndex = 1;
-            this.btn_PurchasingManagement.Text = "     Purchasing Management";
+            this.btn_PurchasingManagement.Text = "     Purchasing Management     ︾";
             this.btn_PurchasingManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PurchasingManagement.UseVisualStyleBackColor = false;
+            this.btn_PurchasingManagement.Click += new System.EventHandler(this.btn_PurchasingManagement_Click);
             // 
             // btn_GoodReceiveNoteList
             // 
@@ -641,19 +643,19 @@ namespace ITP4915MProject
             this.btn_CreateGoodReceiveNote.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_CreateGoodReceiveNote.UseVisualStyleBackColor = false;
             // 
-            // ContainerAccout
+            // ContainerAccount
             // 
-            this.ContainerAccout.Controls.Add(this.btn_ManagePassoword);
-            this.ContainerAccout.Controls.Add(this.button16);
-            this.ContainerAccout.Controls.Add(this.btn_AccountList);
-            this.ContainerAccout.Location = new System.Drawing.Point(0, 329);
-            this.ContainerAccout.Margin = new System.Windows.Forms.Padding(0);
-            this.ContainerAccout.MaximumSize = new System.Drawing.Size(294, 135);
-            this.ContainerAccout.MinimumSize = new System.Drawing.Size(294, 45);
-            this.ContainerAccout.Name = "ContainerAccout";
-            this.ContainerAccout.Padding = new System.Windows.Forms.Padding(2);
-            this.ContainerAccout.Size = new System.Drawing.Size(294, 45);
-            this.ContainerAccout.TabIndex = 8;
+            this.ContainerAccount.Controls.Add(this.btn_ManagePassoword);
+            this.ContainerAccount.Controls.Add(this.btnAccountManagement);
+            this.ContainerAccount.Controls.Add(this.btn_AccountList);
+            this.ContainerAccount.Location = new System.Drawing.Point(0, 329);
+            this.ContainerAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.ContainerAccount.MaximumSize = new System.Drawing.Size(294, 135);
+            this.ContainerAccount.MinimumSize = new System.Drawing.Size(294, 45);
+            this.ContainerAccount.Name = "ContainerAccount";
+            this.ContainerAccount.Padding = new System.Windows.Forms.Padding(2);
+            this.ContainerAccount.Size = new System.Drawing.Size(294, 45);
+            this.ContainerAccount.TabIndex = 8;
             // 
             // btn_ManagePassoword
             // 
@@ -672,25 +674,26 @@ namespace ITP4915MProject
             this.btn_ManagePassoword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ManagePassoword.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // btnAccountManagement
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.Location = new System.Drawing.Point(2, 2);
-            this.button16.MaximumSize = new System.Drawing.Size(298, 45);
-            this.button16.MinimumSize = new System.Drawing.Size(298, 45);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(298, 45);
-            this.button16.TabIndex = 1;
-            this.button16.Text = "     Invoice Management";
-            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button16.UseVisualStyleBackColor = false;
+            this.btnAccountManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.btnAccountManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccountManagement.FlatAppearance.BorderSize = 0;
+            this.btnAccountManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccountManagement.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccountManagement.ForeColor = System.Drawing.Color.White;
+            this.btnAccountManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnAccountManagement.Image")));
+            this.btnAccountManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccountManagement.Location = new System.Drawing.Point(2, 2);
+            this.btnAccountManagement.MaximumSize = new System.Drawing.Size(298, 45);
+            this.btnAccountManagement.MinimumSize = new System.Drawing.Size(298, 45);
+            this.btnAccountManagement.Name = "btnAccountManagement";
+            this.btnAccountManagement.Size = new System.Drawing.Size(298, 45);
+            this.btnAccountManagement.TabIndex = 1;
+            this.btnAccountManagement.Text = "     Account Management          ︾";
+            this.btnAccountManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccountManagement.UseVisualStyleBackColor = false;
+            this.btnAccountManagement.Click += new System.EventHandler(this.btnAccountManagement_Click);
             // 
             // btn_AccountList
             // 
@@ -709,18 +712,18 @@ namespace ITP4915MProject
             this.btn_AccountList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AccountList.UseVisualStyleBackColor = false;
             // 
-            // ContainerAccount
+            // ContainerAccounting
             // 
-            this.ContainerAccount.Controls.Add(this.btn_AccountingManagement);
-            this.ContainerAccount.Controls.Add(this.btn_Report);
-            this.ContainerAccount.Location = new System.Drawing.Point(0, 374);
-            this.ContainerAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.ContainerAccount.MaximumSize = new System.Drawing.Size(294, 90);
-            this.ContainerAccount.MinimumSize = new System.Drawing.Size(294, 45);
-            this.ContainerAccount.Name = "ContainerAccount";
-            this.ContainerAccount.Padding = new System.Windows.Forms.Padding(2);
-            this.ContainerAccount.Size = new System.Drawing.Size(294, 45);
-            this.ContainerAccount.TabIndex = 6;
+            this.ContainerAccounting.Controls.Add(this.btn_AccountingManagement);
+            this.ContainerAccounting.Controls.Add(this.btn_Report);
+            this.ContainerAccounting.Location = new System.Drawing.Point(0, 374);
+            this.ContainerAccounting.Margin = new System.Windows.Forms.Padding(0);
+            this.ContainerAccounting.MaximumSize = new System.Drawing.Size(294, 90);
+            this.ContainerAccounting.MinimumSize = new System.Drawing.Size(294, 45);
+            this.ContainerAccounting.Name = "ContainerAccounting";
+            this.ContainerAccounting.Padding = new System.Windows.Forms.Padding(2);
+            this.ContainerAccounting.Size = new System.Drawing.Size(294, 45);
+            this.ContainerAccounting.TabIndex = 6;
             // 
             // btn_AccountingManagement
             // 
@@ -738,9 +741,10 @@ namespace ITP4915MProject
             this.btn_AccountingManagement.Name = "btn_AccountingManagement";
             this.btn_AccountingManagement.Size = new System.Drawing.Size(298, 45);
             this.btn_AccountingManagement.TabIndex = 1;
-            this.btn_AccountingManagement.Text = "     Accounting Management";
+            this.btn_AccountingManagement.Text = "     Accounting Management    ︾";
             this.btn_AccountingManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AccountingManagement.UseVisualStyleBackColor = false;
+            this.btn_AccountingManagement.Click += new System.EventHandler(this.btn_AccountingManagement_Click);
             // 
             // btn_Report
             // 
@@ -843,8 +847,8 @@ namespace ITP4915MProject
             this.ContainorInventory.ResumeLayout(false);
             this.ContainerInvoice.ResumeLayout(false);
             this.ContainerPurchasing.ResumeLayout(false);
-            this.ContainerAccout.ResumeLayout(false);
             this.ContainerAccount.ResumeLayout(false);
+            this.ContainerAccounting.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -878,7 +882,7 @@ namespace ITP4915MProject
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Panel panMain;
-        private System.Windows.Forms.Panel ContainerAccount;
+        private System.Windows.Forms.Panel ContainerAccounting;
         private System.Windows.Forms.Button btn_AccountingManagement;
         private System.Windows.Forms.Button btn_Report;
         private System.Windows.Forms.Panel ContainerPurchasing;
@@ -895,9 +899,9 @@ namespace ITP4915MProject
         private System.Windows.Forms.Panel ContainerInvoice;
         private System.Windows.Forms.Button btn_Invoice;
         private System.Windows.Forms.Button btn_InvoiceList;
-        private System.Windows.Forms.Panel ContainerAccout;
+        private System.Windows.Forms.Panel ContainerAccount;
         private System.Windows.Forms.Button btn_ManagePassoword;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btnAccountManagement;
         private System.Windows.Forms.Button btn_AccountList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer inventoryTimer;
